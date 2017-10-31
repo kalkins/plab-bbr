@@ -1,2 +1,1 @@
-# plab-bbr
-Behaviour-Based Robotic Controller using a Zumo robot and Raspberry Pi
+# Behaviour-Based Robotic Controller using a Zumo robot and Raspberry Pi
