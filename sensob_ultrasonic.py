@@ -10,6 +10,10 @@ class SensobUltrasonic(Sensob):
         self.is_detected = False
         self.distance = 0
 
+    @property
+    def value(self):
+        return self.is_detected
+
     def update(self):
         self.sensor.update()
         self.distance = self.sensor.get_value()
@@ -20,4 +24,3 @@ class SensobUltrasonic(Sensob):
 
     def get_distance(self):
         return self.distance
-

@@ -7,3 +7,7 @@ class Sensob:
     def update(self):
         """Fetch data from sensors."""
         pass
+
+    def reset(self):
+        """Reset the sensor"""
+        pass

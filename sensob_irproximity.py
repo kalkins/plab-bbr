@@ -9,6 +9,10 @@ class SensobUltrasonic(Sensob):
         self.sensor = IRProximitySensor()
         self.is_detected = [False, False]
 
+    @property
+    def value(self):
+        return self.is_detected
+
     def update(self):
         self.sensor.update()
         self.is_detected = self.sensor.get_value()

@@ -49,4 +49,4 @@ class ColorSensob(Sensob):
                 else:
                     num_color_pixels += 1
 
-        return num_color_pixels / num_pixels
+        self.value = num_color_pixels / num_pixels
