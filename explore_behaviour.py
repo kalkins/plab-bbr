@@ -6,12 +6,12 @@ from behaviour import Behaviour
 class ExploreBehaviour(Behaviour):
     def consider_deactivation(self):
         if self.active_flag:
-            if self.senobs["ultrasonicsenob"].get_is_detected():
+            if self.senobs["ultrasonic"].get_is_detected():
                 self.active_flag = False
 
     def consider_activiation(self):
         if not self.active_flag:
-            if not self.senobs["ultrasonicsenob"].get_is_detected():
+            if not self.senobs["ultrasonic"].get_is_detected():
                 self.active_flag = True
 
     def sense_and_act(self):

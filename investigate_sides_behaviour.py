@@ -4,13 +4,13 @@ from behaviour import Behaviour
 class InvestigateSidesBehaviour(Behaviour):
 
     def consider_deactivation(self):
-        self.active_flag = True in self.sensobs["irproximitysensob"].value
+        self.active_flag = True in self.sensobs["irproximity"].value
 
     def consider_activation(self):
-        self.active_flag = True in self.sensobs["irproximitysensob"].value
+        self.active_flag = True in self.sensobs["irproximity"].value
 
     def sense_and_act(self):
-        proximity_sensor = self.sensobs["irproximitysensob"]
+        proximity_sensor = self.sensobs["irproximity"]
         if proximity_sensor.value[0]:
             self.motor_recommendations = [("l", 0.4, 45, -1)]
         elif proximity_sensor.value[1]:
