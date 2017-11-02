@@ -5,6 +5,8 @@ from sensors.camera import Camera
 class ColorSensob(Sensob):
     """A sensob that detects the amount of a given color in an image."""
 
+    expensive = True
+
     def __init__(self, color, threshold=0.3, cut_ratio=(0.5, 0.25, 0, 0.25)):
         """
         Initialize the sensob.

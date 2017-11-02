@@ -55,7 +55,9 @@ class BBCON:
 
     def run_one_timestep(self):
         # Update active sensobs
-        for sensob in self.sensobs:
+        for sensob_name in self.sensobs:
+            sensob = self.sensobs[sensob_name]
+
             if sensob.expensive:
                 for behaviour in self.active_behaviours:
                     # If the sensob is required right now
