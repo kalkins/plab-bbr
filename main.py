@@ -17,8 +17,8 @@ def main():
     sensobs = {
         'ultrasonic': SensobUltrasonic(),
         'irproximity': SensobIrproximity(),
-        'greencamera': ColorSensob(),
-        'redcamera': ColorSensob(),
+        'greencamera': ColorSensob((0, 255, 0)),
+        'redcamera': ColorSensob((255, 0, 0)),
     }
 
     behaviours = [
