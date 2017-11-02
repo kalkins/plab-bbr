@@ -17,19 +17,28 @@ class Behaviour:
         self.halt_request = False
         self.priority = priority
         self.match_degree = 0
-        self.weight = 0
+
+    @property
+    def weight(self):
+        return self.priority * self.match_degree
 
     def consider_deactivation(self):
         """Consider whether the behaviour should be deactivated."""
-        return False
+        pass
 
     def consider_activation(self):
         """Consider whether the behaviour should be activated."""
-        return False
+        pass
 
     def update(self):
         """Update the behaviours status."""
-        pass
+        if self.active_flag:
+            self.consider_deactivation()
+        else:
+            self.consider_activation()
+
+        if self.active_flag:
+            self.sense_and_act
 
     def sense_and_act(self):
         """Use sensor readings to make motor recommendations."""
