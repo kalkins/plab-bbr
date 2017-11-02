@@ -1,3 +1,4 @@
+from math import floor
 from sensob import Sensob
 from sensors.camera import Camera
 
@@ -31,10 +32,10 @@ class ColorSensob(Sensob):
         image = self.camera.update()
         width, height = image.size
 
-        start_y = height * self.cut_ratio[0]
-        stop_y = height * (1-self.cut_ratio[2])
-        start_x = width * self.cut_ratio[3]
-        stop_x = width * (1-self.cut_ratio[1])
+        start_y = floor(height * self.cut_ratio[0])
+        stop_y = floor(height * (1-self.cut_ratio[2]))
+        start_x = floor(width * self.cut_ratio[3])
+        stop_x = floor(width * (1-self.cut_ratio[1]))
 
         lower = [self.color[i] - 255*self.threshold for i in range(3)]
         upper = [self.color[i] + 255*self.threshold for i in range(3)]
