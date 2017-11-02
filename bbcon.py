@@ -22,6 +22,10 @@ class BBCON:
 
         self.active_behaviours = []
         self.sensobs = sensobs
+
+        for sensob in self.sensobs:
+            sensob.update()
+
         self.motobs = motobs
         self.delay = delay
 
@@ -71,12 +75,8 @@ class BBCON:
             sensob.update()
 
         # Update behaviours
-        for behaviour in self.active_behaviours:
+        for behaviour in self.behaviours:
             behaviour.update()
-            if behaviour.active_flag:
-                self.activate_behaviour(behaviour)
-            else:
-                self.deactivate_behaviour(behaviour)
 
         if self.active_behaviours:
             action = self.arbitrator.choose_action(self.active_behaviours)
@@ -87,5 +87,11 @@ class BBCON:
 
             for motob in self.motobs:
                 motob.update(action[0])
+
+        for behaviour in self.behaviours:
+            if behaviour.active_flag:
+                self.activate_behaviour(behaviour)
+            else:
+                self.deactivate_behaviour(behaviour)
 
         sleep(self.delay)
