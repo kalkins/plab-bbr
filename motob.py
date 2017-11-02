@@ -1,5 +1,6 @@
 from motors import Motors
 
+
 class Motob:
     """An interface one or more motors."""
 
@@ -20,6 +21,7 @@ class MainMotob(Motob):
 
     def update(self, rec):
         self.value = rec
+        self.operationalize()
 
     def operationalize(self):
         for operation in self.value:
