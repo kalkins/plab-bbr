@@ -2,7 +2,7 @@ from sensors.irproximity_sensor import IRProximitySensor
 from sensob import Sensob
 
 
-class SensobUltrasonic(Sensob):
+class SensobIrproximity(Sensob):
 
     def __init__(self):
         super().__init__()
