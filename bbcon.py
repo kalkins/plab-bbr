@@ -31,7 +31,7 @@ class BBCON:
         if isinstance(arbitrator, Arbitrator):
             self.arbitrator = arbitrator
         else:
-            self.arbitrator = arbitrator(self, self.behaviours)
+            self.arbitrator = arbitrator(self)
 
     def add_behaviour(self, behaviour):
         """Add a behaviour to the list of available behaviours."""
