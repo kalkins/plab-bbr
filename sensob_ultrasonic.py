@@ -5,7 +5,6 @@ from sensob import Sensob
 class SensobUltrasonic(Sensob):
 
     def __init__(self):
-        super().__init__()
         self.sensor = Ultrasonic()
         self.is_detected = False
         self.distance = 0

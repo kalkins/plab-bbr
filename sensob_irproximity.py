@@ -5,7 +5,6 @@ from sensob import Sensob
 class SensobIrproximity(Sensob):
 
     def __init__(self):
-        super().__init__()
         self.sensor = IRProximitySensor()
         self.is_detected = [False, False]
 
