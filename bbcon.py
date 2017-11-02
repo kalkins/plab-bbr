@@ -18,7 +18,7 @@ class BBCON:
         self.behaviours = behaviours
 
         for behaviour in behaviours:
-            behaviours.bbcon = self
+            behaviour.bbcon = self
 
         self.active_behaviours = []
         self.sensobs = sensobs
