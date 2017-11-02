@@ -26,11 +26,12 @@ class BBCON:
         self.delay = delay
 
         if arbitrator is None:
-            self.arbitrator = HighestArbitrator()
-        elif isinstance(arbitrator, Arbitrator):
+            self.arbitrator = HighestArbitrator
+
+        if isinstance(arbitrator, Arbitrator):
             self.arbitrator = arbitrator
         else:
-            self.arbitrator = arbitrator()
+            self.arbitrator = arbitrator(self, self.behaviours)
 
     def add_behaviour(self, behaviour):
         """Add a behaviour to the list of available behaviours."""
