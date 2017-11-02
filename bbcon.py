@@ -78,13 +78,14 @@ class BBCON:
             else:
                 self.deactivate_behaviour(behaviour)
 
-        action = self.arbitrator.choose_action(self.active_behaviours)
+        if self.active_behaviours:
+            action = self.arbitrator.choose_action(self.active_behaviours)
 
-        if action[1]:
-            # Halt
-            pass
+            if action[1]:
+                # Halt
+                pass
 
-        for motob in self.motobs:
-            motob.update(action[0])
+            for motob in self.motobs:
+                motob.update(action[0])
 
         sleep(self.delay)
