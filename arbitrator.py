@@ -13,6 +13,7 @@ class HighestArbitrator(Arbitrator):
     def choose_action(self, behaviours):
         number = 0
         halt = False
+        correctBehaviour = behaviours[0]
 
         for behaviour in behaviours:
             if behaviour.halt_request:
