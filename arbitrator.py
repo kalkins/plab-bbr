@@ -1,9 +1,8 @@
 class Arbitrator:
     """A class that decide which behaviour recommendation to follow."""
 
-    def __init__(self, bbcon, behaviours):
+    def __init__(self, bbcon):
         self.bbcon = bbcon
-        self.behaviours = behaviours
 
     def choose_action(self):
         """Decide which behaviour to use."""
@@ -11,11 +10,11 @@ class Arbitrator:
 
 
 class HighestArbitrator(Arbitrator):
-    def choose_action(self):
+    def choose_action(self, behaviours):
         number = 0
         halt = False
 
-        for behaviour in self.behaviours:
+        for behaviour in behaviours:
             if behaviour.halt_request:
                 halt = True
 
