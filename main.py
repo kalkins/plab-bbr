@@ -10,7 +10,7 @@ from sensob_ultrasonic import SensobUltrasonic
 from sensob_irproximity import SensobIrproximity
 from color_sensob import ColorSensob
 
-from motobs import MainMotob
+from motob import MainMotob
 
 
 def main():
