@@ -1,4 +1,4 @@
-from behavior import Behaviour
+from behaviour import Behaviour
 
 
 class AttackBehaviour(Behaviour):
