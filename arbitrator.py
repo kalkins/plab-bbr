@@ -23,4 +23,4 @@ class HighestArbitrator(Arbitrator):
                 number = behaviour.weight
                 correctBehaviour = behaviour
 
-        return (correctBehaviour.motor_recommendations[0], halt)
+        return (correctBehaviour.motor_recommendations, halt)
