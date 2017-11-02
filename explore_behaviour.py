@@ -1,6 +1,6 @@
 import random
 
-from behaviour.py import Behaviour
+from behaviour import Behaviour
 
 
 class ExploreBehaviour(Behaviour):
