@@ -11,7 +11,7 @@ class Motob:
         """Apply a recommendation to the motor."""
         pass
 
-    def operationalize(self, rec):
+    def operationalize(self):
         """Convert a motor recommendation to one or more motor settings."""
         pass
 
@@ -21,13 +21,13 @@ class MainMotob(Motob):
     def update(self, rec):
         self.value = rec
 
-    def operationalize(self, rec):
-        direction = rec[0].lower()
-        speed = rec[1]
+    def operationalize(self):
+        direction = self.value[0].lower()
+        speed = self.value[1]
         if speed == -1:
             speed = 0.25
-        angle = rec[2]
-        duration = rec[3]
+        angle = self.value[2]
+        duration = self.value[3]
         if duration == -1:
             duration = 0.5  # To be replaced with potential timestep-time
         turntime = angle/180 * 1/speed * 0.2  # 0.2 is a guess, and must be adjusted
