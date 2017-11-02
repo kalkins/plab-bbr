@@ -26,7 +26,7 @@ class BBCON:
         self.delay = delay
 
         if arbitrator is None:
-            self.arbitrator = HighestArbitrator
+            arbitrator = HighestArbitrator
 
         if isinstance(arbitrator, Arbitrator):
             self.arbitrator = arbitrator
