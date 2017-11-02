@@ -45,7 +45,7 @@ class ColorSensob(Sensob):
 
         for x in range(start_x, stop_x):
             for y in range(start_y, stop_y):
-                pixel = image.getpixel(x, y)
+                pixel = image.getpixel((x, y))
                 for i in range(3):
                     if not lower[i] <= pixel[i] <= upper[i]:
                         break
