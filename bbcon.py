@@ -23,8 +23,8 @@ class BBCON:
         self.active_behaviours = []
         self.sensobs = sensobs
 
-        for sensob in self.sensobs:
-            sensob.update()
+        for sensob_name in self.sensobs:
+            self.sensobs[sensob_name].update()
 
         self.motobs = motobs
         self.delay = delay
