@@ -15,11 +15,16 @@ class BBCON:
         motobs     -- A list of motob objects to use
         arbitrator -- An arbitrator object or class (default HighestArbitrator)
         """
-        self.behaviours = []
+        self.behaviours = behaviours
+
+        for behaviour in behaviours:
+            behaviours.bbcon = self
+
         self.active_behaviours = []
-        self.sensobs = []
-        self.motobs = []
+        self.sensobs = sensobs
+        self.motobs = motobs
         self.delay = delay
+
         if arbitrator is None:
             self.arbitrator = HighestArbitrator()
         elif isinstance(arbitrator, Arbitrator):

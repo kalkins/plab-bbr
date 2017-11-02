@@ -1,7 +1,7 @@
 class Behaviour:
     """A behaviour analyzes some sensors and determines what the motors should do."""
 
-    def __init__(self, bbcon, sensobs, priority):
+    def __init__(self, sensobs, priority, bbcon=None):
         """
         Initialize the Behaviour object.
 
