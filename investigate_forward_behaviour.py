@@ -13,4 +13,4 @@ class InvestigateForwardBehaviour(Behaviour):
     def sense_and_act(self):
         """Use sensor readings to make motor recommendations."""
         self.match_degree = self.sensobs['ultrasonic'].get_is_detected()
-        self.motor_recommendations = [('f', 0.7, 0, 1)]
+        self.motor_recommendations = [('f', 0.7, 0, -1)]
