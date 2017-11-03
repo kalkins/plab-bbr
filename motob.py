@@ -36,7 +36,7 @@ class MainMotob(Motob):
             turntime = angle/180 * 1/speed * 0.2  # 0.2 is a guess, and must be adjusted
             if direction == "f":
                 self.motor.forward(speed, duration)
-            elif direction == "r":
+            elif direction == "b":
                 self.motor.backward(speed, duration)
             elif direction == "l":
                 self.motor.left(speed, turntime)
