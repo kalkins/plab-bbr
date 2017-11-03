@@ -19,7 +19,7 @@ class HighestArbitrator(Arbitrator):
             if behaviour.halt_request:
                 halt = True
 
-            if number > behaviour.weight:
+            if number < behaviour.weight:
                 number = behaviour.weight
                 correctBehaviour = behaviour
 
