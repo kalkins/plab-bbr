@@ -16,7 +16,7 @@ class SensobUltrasonic(Sensob):
     def update(self):
         self.sensor.update()
         self.distance = self.sensor.get_value()
-        self.is_detected = self.distance < 50
+        self.is_detected = self.distance < 15
 
     def get_is_detected(self):
         return self.is_detected
