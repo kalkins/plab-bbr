@@ -22,11 +22,11 @@ def main():
     }
 
     behaviours = [
-        FleeBehaviour(sensobs, 1),
-        AttackBehaviour(sensobs, 1),
+        FleeBehaviour(sensobs, 4),
+        AttackBehaviour(sensobs, 5),
         ExploreBehaviour(sensobs, 1),
-        InvestigateSidesBehaviour(sensobs, 1),
-        InvestigateForwardBehaviour(sensobs, 1),
+        InvestigateSidesBehaviour(sensobs, 2),
+        InvestigateForwardBehaviour(sensobs, 3),
     ]
 
     motobs = [
