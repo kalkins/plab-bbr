@@ -38,7 +38,7 @@ class Behaviour:
             self.consider_activation()
 
         if self.active_flag:
-            self.sense_and_act
+            self.sense_and_act()
 
     def sense_and_act(self):
         """Use sensor readings to make motor recommendations."""
