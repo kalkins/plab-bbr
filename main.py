@@ -39,7 +39,7 @@ def main():
         while True:
             bbcon.run_one_timestep()
     except KeyboardInterrupt:
-        motobs[0].update([("s", 0, 0, -1)])
+        motobs[0].update([("s", -1, 0, -1)])
 
 
 if __name__ == '__main__':
