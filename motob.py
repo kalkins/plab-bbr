@@ -39,8 +39,8 @@ class MainMotob(Motob):
             elif direction == "b":
                 self.motor.backward(speed, duration)
             elif direction == "l":
-                self.motor.left(speed, turntime)
+                self.motor.left(speed, duration)
             elif direction == "r":
-                self.motor.right(speed, turntime)
+                self.motor.right(speed, duration)
             elif direction == "s":
                 self.motor.stop()
