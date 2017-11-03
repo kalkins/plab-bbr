@@ -5,7 +5,7 @@ from arbitrator import Arbitrator, HighestArbitrator
 class BBCON:
     """The Behaviour-Based Controller."""
 
-    def __init__(self, behaviours, sensobs, motobs, arbitrator=None, delay=0.5):
+    def __init__(self, behaviours, sensobs, motobs, arbitrator=None):
         """
         Initialize the controller.
 
@@ -27,7 +27,6 @@ class BBCON:
             self.sensobs[sensob_name].update()
 
         self.motobs = motobs
-        self.delay = delay
 
         if arbitrator is None:
             arbitrator = HighestArbitrator
@@ -94,5 +93,3 @@ class BBCON:
                 self.activate_behaviour(behaviour)
             else:
                 self.deactivate_behaviour(behaviour)
-
-        sleep(self.delay)
