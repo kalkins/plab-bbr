@@ -65,8 +65,9 @@ class BBCON:
             if sensob.expensive:
                 for behaviour in self.active_behaviours:
                     # If the sensob is required right now
-                    if sensob in behaviour.sensobs:
+                    if sensob in behaviour.sensobs.values():
                         # Break and update
+                        sensob.update()
                         break
                 else:
                     # Don't update, and continue to the next sensob
