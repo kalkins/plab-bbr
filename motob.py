@@ -33,7 +33,7 @@ class MainMotob(Motob):
             duration = operation[3]
             if duration == -1:
                 duration = 0.5  # To be replaced with potential timestep-time
-            turntime = angle/180 * 1/speed * 0.2  # 0.2 is a guess, and must be adjusted
+            turntime = angle/180 * 1/speed * 2.5  # 0.2 is a guess, and must be adjusted
             if direction == "f":
                 self.motor.forward(speed, duration)
             elif direction == "b":
