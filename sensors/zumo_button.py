@@ -1,5 +1,5 @@
 __author__ = 'keithd'
-import wiringpi2 as wp
+import wiringpi as wp
 
 class ZumoButton():
 
@@ -13,4 +13,3 @@ class ZumoButton():
         while read_val:
             read_val = wp.digitalRead(22)
         print("Button pressed!!")
-
