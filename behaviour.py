@@ -1,17 +1,22 @@
 class Behaviour:
     """A behaviour analyzes some sensors and determines what the motors should do."""
 
+    sensob_names = []
+
     def __init__(self, sensobs, priority, bbcon=None):
         """
         Initialize the Behaviour object.
 
         Arguments:
         bbcon    -- The Behaviour-Based controller object
-        sensobs  -- A dictionary of sensobs that the behaviour will use
+        sensobs  -- A dictionary of all sensobs
         priority -- The priority of the behaviour
         """
         self.bbcon = bbcon
-        self.sensobs = sensobs
+
+        self.sensobs = {}
+        for sensob_name in self.sensob_names:
+            self.sensobs[sensob_name] = sensobs[sensob_name]
         self.motor_recommendations = []
         self.active_flag = False
         self.halt_request = False

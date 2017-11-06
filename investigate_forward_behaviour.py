@@ -2,6 +2,8 @@ from behaviour import Behaviour
 
 
 class InvestigateForwardBehaviour(Behaviour):
+    sensob_names = ["ultrasonic"]
+
     def consider_deactivation(self):
         """Consider whether the behaviour should be deactivated."""
         self.active_flag = self.sensobs['ultrasonic'].get_is_detected()

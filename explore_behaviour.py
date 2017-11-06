@@ -6,12 +6,6 @@ from behaviour import Behaviour
 class ExploreBehaviour(Behaviour):
     active_flag = True
 
-    def consider_deactivation(self):
-        pass
-
-    def consider_activiation(self):
-        pass
-
     def sense_and_act(self):
         self.match_degree = 0.1
         dirNumber = random.randint(0, 2)

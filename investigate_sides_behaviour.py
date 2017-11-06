@@ -2,6 +2,7 @@ from behaviour import Behaviour
 
 
 class InvestigateSidesBehaviour(Behaviour):
+    sensob_names = ["irproximity"]
 
     def consider_deactivation(self):
         self.active_flag = True in self.sensobs["irproximity"].value
