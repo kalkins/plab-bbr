@@ -16,7 +16,7 @@ class AttackBehaviour(Behaviour):
 
     def sense_and_act(self):
         red_value = self.sensobs["redcamera"].value
-        if red_value > 0.7:
+        if red_value > 0.5:
             self.motor_recommendations = [("f", 1, 0, 1)]
             self.match_degree = red_value
         else:
