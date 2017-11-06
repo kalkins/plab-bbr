@@ -18,7 +18,9 @@ class Behaviour:
         for sensob_name in self.sensob_names:
             self.sensobs[sensob_name] = sensobs[sensob_name]
         self.motor_recommendations = []
-        self.active_flag = False
+
+        if not hasattr(self, 'active_flag'):
+            self.active_flag = False
         self.halt_request = False
         self.priority = priority
         self.match_degree = 0
