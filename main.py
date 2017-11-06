@@ -17,13 +17,13 @@ def main():
     sensobs = {
         'ultrasonic': SensobUltrasonic(),
         'irproximity': SensobIrproximity(),
-        'greencamera': ColorSensob((0, 255, 0)),
-        'redcamera': ColorSensob((255, 0, 0)),
+        'greencamera': ColorSensob((60, 150, 0), 0.3),
+        'redcamera': ColorSensob((150, 50, 50), 0.2),
     }
 
     behaviours = [
-        FleeBehaviour(sensobs, 4),
-        AttackBehaviour(sensobs, 5),
+        FleeBehaviour(sensobs, 8),
+        AttackBehaviour(sensobs, 10),
         ExploreBehaviour(sensobs, 1),
         InvestigateSidesBehaviour(sensobs, 2),
         InvestigateForwardBehaviour(sensobs, 3),
