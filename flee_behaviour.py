@@ -15,7 +15,7 @@ class FleeBehaviour(Behaviour):
             self.active_flag = True
 
     def sense_and_act(self):
-        green_value = self.sensobs["greencamera"]
+        green_value = self.sensobs["greencamera"].value
         if green_value > 0.7:
             self.motor_recommendations = [("r", 0.6, 180, -1), ("f", 1, 0, -1)]
             self.match_degree = green_value
